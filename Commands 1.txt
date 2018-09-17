@@ -1,0 +1,45 @@
+docker run -t -i NAMEOFDOCKER
+
+
+docker run -d NAME sleep 1000
+#Runs in background
+
+Check running dockers:
+docker ps
+
+All contaniners ever run
+docker ps -a 
+
+
+docker run --rm busybox:1.24 sleep 1
+#Deleted the docker once done!
+
+
+Assigning names to docker
+docker run --name hello_world busybox:1.24 
+
+Ispect Docker status
+docker inspect ID
+#Get the ID when you run docker wt -d (Detached mode)
+
+
+
+Mapping ports:
+-p hst_port:container_port
+
+Example for Tomcat:
+docker run -it -p 8888:8080 tomcat:8.0
+(Cntrl+c exits)
+
+
+docker run -it -d -p 8888:8080 tomcat:8.0
+(-d) will start the command in background!
+
+Getting logs of docker running in background:
+docker logs ID
+
+
+Docker layers ->
+docker history busybox:1.24
+
+All changes are made to the 'writable container layer' - Everythng stored, modified, etc is done here...
