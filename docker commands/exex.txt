@@ -1,0 +1,22 @@
+docker exec -it ID bash
+#Opens bash access
+
+
+Making 2 containers talk - >
+
+1. IP of servers = 0.0.0.0
+
+
+
+'Docker Links'
+
+docker run -d --name redis redis:3.2.0
+
+docker ps #Verify download
+
+docker run -d -p 5000:5000 --link redis dockerapp:1.01
+Use 'redis' for REDIS host name!
+
+this works due to hostname mapping
+
+Remeber -> REDIS wont get exposed to world! It just creates a secure tunnel (-p) flag

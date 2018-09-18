@@ -1,0 +1,13 @@
+docker images
+
+docker tag IMAGEID REPONAME:TAG
+
+docker tag 290bf0f2b179 jaylohokare/try:1.01
+
+Avoid using latest tag!
+
+
+docker login
+
+
+docker push jaylohokare/try:1.01

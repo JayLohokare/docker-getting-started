@@ -1,0 +1,27 @@
+Using Docker file
+
+File name - Dockerfile
+
+Use -y options (SO that no prompt comes up)
+
+FROM debian:jessie
+RUN apt-get update
+RUN apt-get install -y git
+RUN apt-get install -y vim
+.
+.
+.
+
+
+
+docker build -t  namesOfImage(jaylohokare/debian) .(If the fileis in current path)
+docker build -t  jaylohokare/debian .
+
+
+Image formed!
+A container writes layers to these Images
+Then, Docker starts a new contaner from this new Image
+
+
+docker images 
+Will show the new image now!

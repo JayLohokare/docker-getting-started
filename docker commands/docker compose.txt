@@ -1,0 +1,43 @@
+Links wont work if high number of micro services
+
+Use docker-compose.yaml file instead
+
+Helps when many dockers 
+
+No need to link -> names by default used as network identifies in V2.0
+
+Stop all containers before starting compose commands.
+
+docker stop ID 
+#To stop existing containers
+
+docker-compose up
+#Starts all the containers!
+
+
+
+docker-compose up -d 
+#Background
+
+docker-compose pd
+#Show all containers running
+
+docker-compose logs
+#Shows all logs for all containers
+
+docker-compose logs CONTAINER_NAME
+#For specific container
+
+docker-compose stop
+#Stops without removing
+
+docker-compose rm
+#Remove everything. Data Lost
+
+
+By default -> docker-compose up build only if image is new
+
+To modify after making changes ->
+docker-compose build
+docker-compose up
+

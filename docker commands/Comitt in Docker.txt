@@ -1,0 +1,30 @@
+docker run -it debian:jessie
+
+#Will enter the docker environment
+
+apt-get update && apt-get install -y git
+
+clear
+
+git
+
+#Git is installed!
+
+exit
+
+#Exit the docker shell
+#Lets commit the docker now
+
+docker ps -a
+#Gets container ID
+
+#docker commit ID DockerHub repo name:Version
+docker commit 7b7afe480750 jaylohokare/try:1.0
+#Returns id of image
+
+docker images
+
+#Now run using name!
+docker run -it jaylohokare/try:1.0
+
+

@@ -1,0 +1,27 @@
+IMPORTAT-
+Each command is written to top writable layer of the container, then commited as a new image.
+This new image is then used in next step by docker. Each run instruction creates a new image layer.
+
+FROM debian:jessie
+RUN apt-get update && apt-get install -y \
+	git \
+	vim
+
+This single command execution is better than previous method. As it creates only one extra layer
+
+Good habit ->
+Add all the multi-line argments alphanumerically
+
+
+CMD commands -> when container starts
+
+CMD ["echo", "Hello world"]
+
+Notice that n building, you see the ID of the image automatically
+
+docker run ID
+#Will now show "Hello world"
+
+
+Different command can be specified at run time!
+docker run ID echo "Second Command"

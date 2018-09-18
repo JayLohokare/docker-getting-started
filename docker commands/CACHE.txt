@@ -1,0 +1,15 @@
+Every time docker runs something, it creates image layer
+If command remains same, it reuses the image!
+
+Helps in making builds faster
+
+Dont use caching aggressively
+
+apt-get update might load from cache -> Resulting to old updates/
+
+
+Use --no-cache=true with docker build for avoiding such issues.
+
+Eg:
+
+docker build -t jaylohokare/try . --no-cache=true

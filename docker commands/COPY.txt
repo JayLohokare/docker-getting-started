@@ -1,0 +1,4 @@
+COPY abc.txt /src/abc.txt
+#COPY locationOnMachine locationOnDocker
+
+ADD -> Allows downloading from internet! Also unpacks files
