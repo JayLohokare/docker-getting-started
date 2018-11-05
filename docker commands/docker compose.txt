@@ -19,7 +19,7 @@ docker-compose up
 docker-compose up -d 
 #Background
 
-docker-compose pd
+docker-compose ps
 #Show all containers running
 
 docker-compose logs
@@ -34,6 +34,9 @@ docker-compose stop
 docker-compose rm
 #Remove everything. Data Lost
 
+
+docker-compose up --build
+#Build and run 
 
 By default -> docker-compose up build only if image is new
 
